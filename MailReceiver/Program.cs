@@ -6,7 +6,7 @@ namespace MailReceiver
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
