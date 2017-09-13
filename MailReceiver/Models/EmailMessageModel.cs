@@ -14,18 +14,20 @@ namespace MailReceiver.Models
         [Key(2)]
         public string ReplyTo { get; set; }
         [Key(3)]
-        public string To { get; set; }
+        public string RecipientName { get; set;}
         [Key(4)]
-        public HashSet<string> Cc { get; set; } = new HashSet<string>();
+        public string To { get; set; }
         [Key(5)]
-        public HashSet<string> Bcc { get; set; } = new HashSet<string>();
+        public HashSet<string> Cc { get; set; } = new HashSet<string>();
         [Key(6)]
-        public string RawMessage { get; set; }
+        public HashSet<string> Bcc { get; set; } = new HashSet<string>();
         [Key(7)]
-        public string HtmlMessage { get; set; }
+        public string RawMessage { get; set; }
         [Key(8)]
-        public string Subject { get; set; }
+        public string HtmlMessage { get; set; }
         [Key(9)]
+        public string Subject { get; set; }
+        [Key(10)]
         public EmailConfigModel EmailConfig { get; set; }
     }
 }

@@ -23,7 +23,7 @@ namespace MailReceiver
                     consumer.Received += ConsumerReceived;
 
                     channel.BasicConsume(queue: RabbitConfig.RABBITMQ_CFG_DEFAULT_QUEUE, autoAck: RabbitConfig.RABBITMQ_CFG_AUTOACK, consumer: consumer, consumerTag: "", 
-                                         noLocal: true, exclusive: false, arguments: null);
+                                         noLocal: true, exclusive: RabbitConfig.RABBITMQ_CFG_EXCLUSIVE, arguments: RabbitConfig.RABBITMQ_CFG_ARGS);
                 }
             }
         }
